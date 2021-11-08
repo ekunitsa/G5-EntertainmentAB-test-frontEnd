@@ -1,0 +1,168 @@
+$mainClass: '.g5-header'
+
+#{$mainClass}
+  background: url(../components/header/img/bg.jpg) no-repeat top center
+  background-size: auto 100%
+  min-height: 730px
+  position: relative
+  overflow: hidden
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    background-image: url(../components/header/img/bg@2x.jpg)
+  &_logo
+    display: flex
+    justify-content: center
+    position: relative
+    z-index: 6
+    &Img
+      padding-top: 60px
+  &_girlContainer
+    position: absolute
+    bottom: -40px
+    left: 20px
+    z-index: 2
+  &_mjContainer
+    position: absolute
+    bottom: 90px
+    right: 50px
+    z-index: 1
+  &_btnContainer
+    display: flex
+    justify-content: center
+    margin-top: 100px
+    position: relative
+    z-index: 3
+  &_btn
+    background: linear-gradient(180deg, #FFA701 0%, #D60B00 100%)
+    border: 1px solid #912C08
+    box-sizing: border-box
+    box-shadow: 0px 4px 20px rgba(69, 44, 31, 0.8), inset 0px -5px 2px rgba(255, 24, 13, 0.7), inset 0px -1px 18px #991200
+    border-radius: 31px
+    display: inline-block
+    min-width: 400px
+    padding: 25px 60px
+    text-align: center
+    font-weight: bold
+    font-size: 44px
+    line-height: 48px
+    color: #FFFFFF
+    text-decoration: none
+    text-shadow: 0px 2px 3px #000000
+    position: relative
+    @include transition(all)
+    &:after
+      content: ''
+      width: calc(100% - 8px)
+      position: absolute
+      top: 4px
+      left: 4px
+      background: linear-gradient(180deg, rgba(255, 167, 1, 0.6) 0%, rgba(254, 103, 0, 0.6) 100%)
+      box-shadow: inset 0px 0px 3px #DB5700
+      border-radius: 26px 26px 15px 15px
+      height: 40px
+      @include transition(all)
+    &:before
+      content: ''
+      background: rgba(196, 196, 196, 0.1)
+      opacity: 0.5
+      box-shadow: 0px -2px 3px #F7DB5E, inset 0px 3px 3px rgba(247, 219, 94, 0.5)
+      border-radius: 26px 26px 0px 0px
+      left: 10px
+      top: 12px
+      height: 20px
+      position: absolute
+      width: calc(100% - 20px)
+      @include transition(all)
+    &:hover
+      box-shadow: 0px 4px 20px rgba(69, 44, 31, 0.8), inset 0px 0px 2px rgba(255, 24, 13, 0.7), inset 0px -1px 18px #991200
+      &:after,
+      &:before
+        opacity: 0
+      #{$mainClass}
+        &_btnGlare
+          opacity: 0
+  &_btnText
+    position: relative
+    z-index: 5
+  &_btnGlare
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.8) 21.35%, rgba(247, 219, 94, 0) 100%)
+    transform: rotate(-17.63deg)
+    width: 17px
+    height: 11px
+    top: 6px
+    left: 14px
+    display: block
+    position: absolute
+    @include transition(opacity)
+  &_desc
+    position: absolute
+    z-index: 3
+    bottom: 100px
+    display: flex
+    justify-content: center
+    width: 100%
+    font-weight: 500
+    font-size: 40px
+    line-height: 44px
+    text-align: center
+    color: #FFFFFF
+    text-shadow: 0 2px 2px #000000
+  @media all and (max-width: 1100px)
+    &_girlContainer
+      left: 0
+    &_mjContainer
+      right: 20px
+  @media all and (max-width: 991px)
+    min-height: 500px
+    &_girlImg
+      width: 350px
+    &_mjImg
+      width: 300px
+    &_logoImg
+      padding-top: 40px
+    &_logoImg
+      width: 270px
+    &_btn
+      font-size: 36px
+      line-height: 48px
+      min-width: 300px
+      padding: 13px 30px
+    &_desc
+      font-size: 28px
+      line-height: 40px
+      bottom: 70px
+  @media all and (max-width: 767px)
+    &_logoImg
+      padding-top: 20px
+    &_logoImg
+      width: 170px
+    &_girlImg
+      width: 320px
+    &_mjImg
+      width: 230px
+    &_girlContainer
+      left: -50px
+    &_mjContainer
+      right: -10px
+    &_btnContainer
+      margin-top: 225px
+    &_btn
+      font-size: 32px
+      line-height: 48px
+      min-width: 265px
+      padding: 7px 30px
+    &_desc
+      font-size: 24px
+      line-height: 40px
+      bottom: 50px
+
+.webp
+  #{$mainClass}
+    background-image: url(../components/header/img/bg.webp)
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      background-image: url(../components/header/img/bg@2x.webp)
+
+.avif
+  #{$mainClass}
+    background-image: url(../components/header/img/bg.avif)
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      background-image: url(../components/header/img/bg@2x.avif)

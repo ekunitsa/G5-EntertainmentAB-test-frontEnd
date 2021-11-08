@@ -1,0 +1,16 @@
+$fontFiraSans: 'Fira Sans', Arial, sans-serif
+
+// mixin
+@mixin transition($value)
+  transition: .2s linear 0s
+  transition-property: $value
+
+@mixin placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content

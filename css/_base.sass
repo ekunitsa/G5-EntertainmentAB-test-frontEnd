@@ -1,0 +1,23 @@
+$mainClass: '.g5-base'
+
+body
+  font-family: $fontFiraSans
+  font-size: 18px
+  line-height: 28px
+  background: #FFEDD6 url(../img/pattern.png) repeat top center
+  color: #393939
+
+img
+  max-width: 100%
+
+.container-fluid
+  max-width: 1100px
+  padding: 0 30px
+  @media all and (max-width: 767px)
+    padding: 0 15px
+
+#{$mainClass}
+  &_wrapper
+    margin: 0 auto
+    max-width: 1440px
+    box-shadow: 0 0 20px rgba(69, 44, 31, 0.2)

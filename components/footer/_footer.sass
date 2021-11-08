@@ -1,0 +1,113 @@
+$mainClass: '.g5-footer'
+
+#{$mainClass}
+  background: url(../components/footer/img/bg.jpg) no-repeat bottom center
+  background-size: cover
+  position: relative
+  border-top:
+    left-radius: 40px
+    right-radius: 40px
+  margin-top: -40px
+  z-index: 5
+  padding-top: 80px
+  padding-bottom: 40px
+  overflow: hidden
+  color: #ffffff
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    background-image: url(../components/footer/img/bg@2x.jpg)
+  &:after
+    content: ''
+    width: 100%
+    position: absolute
+    bottom: 0
+    left: 0
+    height: 160px
+    background: linear-gradient(180deg, rgba(100, 39, 15, 0) 0%, rgba(100, 39, 15, 0.12) 23.96%, #64270F 100%)
+  &_title
+    font-weight: bold
+    font-size: 55px
+    line-height: 66px
+    margin-bottom: 25px
+  &_desc
+    font-weight: 500
+    font-size: 18px
+    line-height: 28px
+    max-width: 350px
+    margin-bottom: 25px
+    display: block
+  &_content
+    position: relative
+    z-index: 2
+  &_social
+    margin-bottom: 100px
+  &_soc
+    margin-right: 50px
+    width: 50px
+    height: 50px
+    display: inline-block
+    @include transition(all)
+    &:hover
+      opacity: 0.7
+  &_socialLink
+    &:last-child
+      #{$mainClass}
+        &_soc
+          margin-right: 0
+  &_soc1
+    background-image: url(../components/footer/img/social-1.svg)
+  &_soc2
+    background-image: url(../components/footer/img/social-2.svg)
+  &_soc3
+    background-image: url(../components/footer/img/social-3.svg)
+  &_soc4
+    background-image: url(../components/footer/img/social-4.svg)
+  &_copy
+    text-align: center
+  &_copyText
+    font-size: 16px
+    line-height: 19px
+    margin-bottom: 15px
+    span
+      padding-left: 15px
+  &_copyOneElem
+    font-size: 16px
+    line-height: 19px
+    text-decoration: none
+    color: #ffffff
+    display: inline-block
+    margin: 0 15px
+    &:hover
+      text-decoration: underline
+  @media all and (max-width: 991px)
+    background-position: bottom right -200px
+    &_title
+      font-size: 40px
+      line-height: 48px
+      margin-bottom: 15px
+    &_desc
+      margin-bottom: 20px
+  @media all and (max-width: 767px)
+    padding-top: 40px
+    text-align: center
+    &_desc
+      display: inline-block
+      max-width: 290px
+    &_soc
+      margin-right: 20px
+    &_copyText
+      span
+        display: inline-block
+        width: 100%
+        margin-top: 10px
+        padding-left: 0
+.webp
+  #{$mainClass}
+    background-image: url(../components/footer/img/bg.webp)
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      background-image: url(../components/footer/img/bg@2x.webp)
+
+.avif
+  #{$mainClass}
+    background-image: url(../components/footer/img/bg.avif)
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      background-image: url(../components/footer/img/bg@2x.avif)

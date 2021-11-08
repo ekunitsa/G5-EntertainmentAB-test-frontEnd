@@ -1,0 +1,181 @@
+$mainClass: '.g5-about'
+
+#{$mainClass}
+  background: url(../components/about/img/bg.jpg) no-repeat top center
+  background-size: cover
+  min-height: 620px
+  position: relative
+  border-top:
+    left-radius: 40px
+    right-radius: 40px
+  margin-top: -40px
+  z-index: 5
+  padding-top: 80px
+  padding-bottom: 120px
+  overflow: hidden
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    background-image: url(../components/about/img/bg@2x.jpg)
+  &_cloud1
+    position: absolute
+    left: 15px
+    top: -25px
+    z-index: 2
+  &_cloud2
+    position: absolute
+    right: 0px
+    top: -25px
+    z-index: 2
+  &_container
+    position: relative
+  &_leftImg
+    border: 3px solid #FFFFFF
+    box-sizing: border-box
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.63)
+    border-radius: 40px
+  &_btn
+    background: linear-gradient(180deg, #FFA701 0%, #D60B00 100%)
+    border: 1px solid #912C08
+    box-sizing: border-box
+    box-shadow: 0px 4px 20px rgba(69, 44, 31, 0.8), inset 0px -5px 2px rgba(255, 24, 13, 0.7), inset 0px -1px 18px #991200
+    border-radius: 31px
+    display: inline-block
+    max-width: 360px
+    width: 100%
+    padding: 18px 60px
+    text-align: center
+    font-weight: bold
+    font-size: 36px
+    line-height: 48px
+    color: #FFFFFF
+    text-decoration: none
+    text-shadow: 0px 2px 3px #000000
+    position: relative
+    @include transition(all)
+    &:after
+      content: ''
+      width: calc(100% - 8px)
+      position: absolute
+      top: 4px
+      left: 4px
+      background: linear-gradient(180deg, rgba(255, 167, 1, 0.6) 0%, rgba(254, 103, 0, 0.6) 100%)
+      box-shadow: inset 0px 0px 3px #DB5700
+      border-radius: 26px 26px 15px 15px
+      height: 40px
+      @include transition(all)
+    &:before
+      content: ''
+      background: rgba(196, 196, 196, 0.1)
+      opacity: 0.5
+      box-shadow: 0px -2px 3px #F7DB5E, inset 0px 3px 3px rgba(247, 219, 94, 0.5)
+      border-radius: 26px 26px 0px 0px
+      left: 10px
+      top: 12px
+      height: 20px
+      position: absolute
+      width: calc(100% - 20px)
+      @include transition(all)
+    &:hover
+      box-shadow: 0px 4px 20px rgba(69, 44, 31, 0.8), inset 0px 0px 2px rgba(255, 24, 13, 0.7), inset 0px -1px 18px #991200
+      &:after,
+      &:before
+        opacity: 0
+      #{$mainClass}
+        &_btnGlare
+          opacity: 0
+  &_btnText
+    position: relative
+    z-index: 5
+  &_btnGlare
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.8) 21.35%, rgba(247, 219, 94, 0) 100%)
+    transform: rotate(-17.63deg)
+    width: 17px
+    height: 11px
+    top: 6px
+    left: 14px
+    display: block
+    position: absolute
+    @include transition(opacity)
+  &_right
+    text-align: center
+    position: relative
+    z-index: 3
+  &_icon
+    margin-bottom: 20px
+
+    &Img
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.64)
+      border-radius: 12px
+      width: 120px
+  &_title
+    font-weight: bold
+    font-size: 30px
+    line-height: 44px
+    margin-bottom: 10px
+  &_desc
+    font-weight: 500
+    font-size: 24px
+    line-height: 36px
+    text-shadow: 0px 4px 20px #FFFFFF, 0px 0px 10px #FFFFFF
+    margin-bottom: 25px
+    display: block
+  @media all and (max-width: 991px)
+    padding-top: 40px
+    &_btn
+      font-size: 32px
+      line-height: 48px
+      max-width: 300px
+      padding: 13px 30px
+    &_leftImage
+      text-align: center
+      margin-bottom: 40px
+    &_leftImg
+      max-width: 480px
+      width: 100%
+    &_title
+      font-size: 24px
+      line-height: 36px
+    &_desc
+      font-size: 20px
+      line-height: 32px
+    &_cloud1Img
+      width: 200px
+    &_cloud2
+      top: 300px
+      right: -70px
+    &_cloud2Img
+      width: 265px
+  @media all and (max-width: 767px)
+    padding-top: 80px
+    &_btn
+      font-size: 32px
+      line-height: 48px
+      max-width: 265px
+      padding: 7px 30px
+    &_cloud1
+      top: -50px
+      right: -70px
+    &_cloud1Img
+      width: 120px
+    &_cloud2
+      top: -50px
+      right: -50px
+    &_cloud2Img
+      width: 150px
+    &_leftImage
+      margin-bottom: 20px
+    &_icon
+      margin-bottom: 15px
+    &_desc
+      margin-bottom: 20px
+
+.webp
+  #{$mainClass}
+    background-image: url(../components/about/img/bg.webp)
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      background-image: url(../components/about/img/bg@2x.webp)
+
+.avif
+  #{$mainClass}
+    background-image: url(../components/about/img/bg.avif)
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      background-image: url(../components/about/img/bg@2x.avif)
