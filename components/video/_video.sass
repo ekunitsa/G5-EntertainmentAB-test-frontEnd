@@ -29,13 +29,13 @@ $mainClass: '.g5-video'
   &_video
     position: relative
   &_bg
-    background: url(../components/video/img/bg.png) no-repeat top center
+    background:
+      repeat: no-repeat
+      position: top center
     background-size: 877px 527px
     width: 877px
     height: 527px
     padding: 46px 74px 65px 62px
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-      background-image: url(../components/video/img/bg@2x.jpg)
   &_youtube
     background-color: #000
     margin-bottom: 30px
@@ -69,7 +69,6 @@ $mainClass: '.g5-video'
       border-style: solid
       border-width: 15px 0 15px 26.0px
       border-color: transparent transparent transparent #fff
-
   &_play-button
     position: absolute
     &:before
@@ -151,6 +150,14 @@ $mainClass: '.g5-video'
       right: -10px
       &Img
         width: 55px
+
+.fallback
+  #{$mainClass}
+    &_bg
+      background-image: url(../components/video/img/bg.png)
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+        background-image: url(../components/video/img/bg@2x.jpg)
+
 .webp
   #{$mainClass}
     &_bg

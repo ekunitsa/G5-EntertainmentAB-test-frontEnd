@@ -1,7 +1,9 @@
 $mainClass: '.g5-about'
 
 #{$mainClass}
-  background: url(../components/about/img/bg.jpg) no-repeat top center
+  background:
+    repeat: no-repeat
+    position: top center
   background-size: cover
   min-height: 620px
   position: relative
@@ -13,8 +15,6 @@ $mainClass: '.g5-about'
   padding-top: 80px
   padding-bottom: 120px
   overflow: hidden
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-    background-image: url(../components/about/img/bg@2x.jpg)
   &_cloud1
     position: absolute
     left: 15px
@@ -171,6 +171,12 @@ $mainClass: '.g5-about'
       margin-bottom: 15px
     &_desc
       margin-bottom: 20px
+
+.fallback
+  #{$mainClass}
+    background-image: url(../components/about/img/bg.jpg)
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      background-image: url(../components/about/img/bg@2x.jpg)
 
 .webp
   #{$mainClass}

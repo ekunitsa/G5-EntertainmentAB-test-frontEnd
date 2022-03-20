@@ -1,7 +1,9 @@
 $mainClass: '.g5-footer'
 
 #{$mainClass}
-  background: url(../components/footer/img/bg.jpg) no-repeat bottom center
+  background:
+    repeat: no-repeat
+    position: bottom center
   background-size: cover
   position: relative
   border-top:
@@ -13,8 +15,6 @@ $mainClass: '.g5-footer'
   padding-bottom: 40px
   overflow: hidden
   color: #ffffff
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-    background-image: url(../components/footer/img/bg@2x.jpg)
   &:after
     content: ''
     width: 100%
@@ -100,6 +100,13 @@ $mainClass: '.g5-footer'
         width: 100%
         margin-top: 10px
         padding-left: 0
+
+.fallback
+  #{$mainClass}
+    background-image: url(../components/footer/img/bg.jpg)
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      background-image: url(../components/footer/img/bg@2x.jpg)
+
 .webp
   #{$mainClass}
     background-image: url(../components/footer/img/bg.webp)

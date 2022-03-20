@@ -1,13 +1,13 @@
 $mainClass: '.g5-header'
 
 #{$mainClass}
-  background: url(../components/header/img/bg.jpg) no-repeat top center
+  background:
+    repeat: no-repeat
+    position: top center
   background-size: auto 100%
   min-height: 730px
   position: relative
   overflow: hidden
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-    background-image: url(../components/header/img/bg@2x.jpg)
   &_logo
     display: flex
     justify-content: center
@@ -160,6 +160,12 @@ $mainClass: '.g5-header'
       font-size: 24px
       line-height: 40px
       bottom: 50px
+
+.fallback
+  #{$mainClass}
+    background-image: url(../components/header/img/bg.jpg)
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      background-image: url(../components/header/img/bg@2x.jpg)
 
 .webp
   #{$mainClass}
